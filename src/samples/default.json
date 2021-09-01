@@ -1,0 +1,192 @@
+{
+	"page": {
+		"id": "1",
+		"layout": {
+			"isGrid": true,
+			"columns": 12,
+			"rows": 0
+		},
+		"engine": "VISUAL",
+		"sections": [
+			{
+				"styles": {
+					"backgroundColor": "grey",
+					"padding": "3rem",
+					"border": "3rem solid green"
+				},
+				"layout" : {
+					"self": {
+						"height": "500px",
+						"width": "100%"
+					},
+					"isGrid": false,
+					"unit": "%",
+					"columns": [10, 10, 60, 20],
+					"rows": 0
+				},
+				"blocks": [
+					{
+						"blockName": "TITLE",
+						"contents": {
+							"type": "text",
+							"value": "THIS IS SAMPLE TEXT!!!"
+						},
+						"styles": {
+							"color": "red",
+							"backgroundColor": "blue"
+						}
+					},
+					{
+						"blockName": "DESCRIPTION",
+						"contents": {
+							"type": "text",
+							"value": "THIS IS SAMPLE DESC!"
+						},
+						"styles": {
+							"color": "orange",
+							"backgroundColor": "black"
+						}
+					}, 
+					{
+						"blockName": "DESCRIPTION",
+						"contents": {
+							"type": "html",
+							"value": "<p>Since then eSports has been steadily <b>developing</b>, <span style='color:red'>but</span> in the beginning of the 21st century its popularity skyrocketed, thanks to newly introduced games such as <a href='https://en.wikipedia.org/wiki/Counter-Strike'><span data-comment='thread-1'>Counter-Strike</span></a><span class='ck-comment-marker' data-comment='thread-1'>, </span><a href='https://en.wikipedia.org/wiki/Quake_(video_game)'><span class='ck-comment-marker' data-comment='thread-1'>Quake</span></a><span class='ck-comment-marker' data-comment='thread-1'>, and </span><a href='https://en.wikipedia.org/wiki/StarCraft_(video_game)'><span class='ck-comment-marker' data-comment='thread-1'>Starcraft</span></a>.</p>"
+						}
+					},
+					{
+						"blockName": "SPACER",
+						"styles": {
+							"backgroundColor": "pink"
+						}
+					}
+				]
+			},
+			{
+				"layout" : {
+					"self": {
+						"height": "500px",
+						"width": "100%"
+					},
+					"isGrid": false,
+					"columns": 0,
+					"rows": 3
+				},
+				"blocks": [
+					{
+						"blockName": "TITLE",
+						"contents": {
+							"type": "text",
+							"value": "THIS IS SAMPLE TEXT!!!"
+						},
+						"styles": {
+							"color": "red",
+							"backgroundColor": "blue"
+						}
+					},
+					{
+						"blockName": "DESCRIPTION",
+						"contents": {
+							"type": "text",
+							"value": "THIS IS SAMPLE DESC!"
+						},
+						"styles": {
+							"color": "orange",
+							"backgroundColor": "black"
+						}
+					}, 
+					{
+						"blockName": "DESCRIPTION",
+						"contents": {
+							"type": "html",
+							"value": "<p>Since then eSports has been steadily <b>developing</b>, <span style='color:red'>but</span> in the beginning of the 21st century its popularity skyrocketed, thanks to newly introduced games such as <a href='https://en.wikipedia.org/wiki/Counter-Strike'><span data-comment='thread-1'>Counter-Strike</span></a><span class='ck-comment-marker' data-comment='thread-1'>, </span><a href='https://en.wikipedia.org/wiki/Quake_(video_game)'><span class='ck-comment-marker' data-comment='thread-1'>Quake</span></a><span class='ck-comment-marker' data-comment='thread-1'>, and </span><a href='https://en.wikipedia.org/wiki/StarCraft_(video_game)'><span class='ck-comment-marker' data-comment='thread-1'>Starcraft</span></a>.</p>"
+						}
+					},
+					{
+						"blockName": "SPACER",
+						"styles": {
+							"backgroundColor": "pink"
+						}
+					}
+				]
+			},
+			{
+				"layout" : {
+					"self": {
+						"height": "500px",
+						"width": "100%"
+					},
+					"isGrid": true,
+					"columns": 0,
+					"rows": 0
+				},
+				"blocks": [
+					{
+						"blockName": "TITLE",
+						"contents": {
+							"type": "text",
+							"value": "THIS IS SAMPLE TEXT!!!"
+						},
+						"styles": {
+							"color": "red",
+							"backgroundColor": "blue"
+						}
+					},
+					{
+						"blockName": "DESCRIPTION",
+						"contents": {
+							"type": "text",
+							"value": "THIS IS SAMPLE DESC!"
+						},
+						"styles": {
+							"color": "orange",
+							"backgroundColor": "black"
+						}
+					}, 
+					{
+						"blockName": "DESCRIPTION",
+						"contents": {
+							"type": "html",
+							"value": "<p>Since then eSports has been steadily <b>developing</b>, <span style='color:red'>but</span> in the beginning of the 21st century its popularity skyrocketed, thanks to newly introduced games such as <a href='https://en.wikipedia.org/wiki/Counter-Strike'><span data-comment='thread-1'>Counter-Strike</span></a><span class='ck-comment-marker' data-comment='thread-1'>, </span><a href='https://en.wikipedia.org/wiki/Quake_(video_game)'><span class='ck-comment-marker' data-comment='thread-1'>Quake</span></a><span class='ck-comment-marker' data-comment='thread-1'>, and </span><a href='https://en.wikipedia.org/wiki/StarCraft_(video_game)'><span class='ck-comment-marker' data-comment='thread-1'>Starcraft</span></a>.</p>"
+						}
+					},
+					{
+						"blockName": "TITLE",
+						"contents": {
+							"type": "text",
+							"value": "THIS IS SAMPLE TEXT!!!"
+						},
+						"styles": {
+							"color": "red",
+							"backgroundColor": "blue"
+						}
+					},
+					{
+						"blockName": "DESCRIPTION",
+						"contents": {
+							"type": "text",
+							"value": "THIS IS SAMPLE DESC!"
+						},
+						"styles": {
+							"color": "orange",
+							"backgroundColor": "black"
+						}
+					}, 
+					{
+						"blockName": "DESCRIPTION",
+						"contents": {
+							"type": "html",
+							"value": "<p>Since then eSports has been steadily <b>developing</b>, <span style='color:red'>but</span> in the beginning of the 21st century its popularity skyrocketed, thanks to newly introduced games such as <a href='https://en.wikipedia.org/wiki/Counter-Strike'><span data-comment='thread-1'>Counter-Strike</span></a><span class='ck-comment-marker' data-comment='thread-1'>, </span><a href='https://en.wikipedia.org/wiki/Quake_(video_game)'><span class='ck-comment-marker' data-comment='thread-1'>Quake</span></a><span class='ck-comment-marker' data-comment='thread-1'>, and </span><a href='https://en.wikipedia.org/wiki/StarCraft_(video_game)'><span class='ck-comment-marker' data-comment='thread-1'>Starcraft</span></a>.</p>"
+						}
+					},
+					{
+						"blockName": "SPACER",
+						"styles": {
+							"backgroundColor": "pink"
+						}
+					}
+				]
+			}
+		]
+	}
+}

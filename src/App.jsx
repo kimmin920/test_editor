@@ -7,7 +7,6 @@ import pageData from './samples/default.json';
 function App() {
   return (
     <S_App>
-      EDITOR!
       <Page pageData={pageData.page} />
     </S_App>
   );

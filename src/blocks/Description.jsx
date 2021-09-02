@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 export default function Description({ contents, styles }) {
   const { type, value } = contents;
-  console.log(styles);
+
   return (
     // TODO: type으로 text 와 html을 나눌지, 모두 html로 할지..
     type === 'text' ?

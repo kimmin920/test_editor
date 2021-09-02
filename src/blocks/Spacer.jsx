@@ -3,9 +3,7 @@ import styled from 'styled-components'
 
 export default function Spacer({ contents, styles }) {
   return (
-    <S_Spacer style={styles}>
-
-    </S_Spacer>
+    <S_Spacer style={styles} />
   )
 }
 

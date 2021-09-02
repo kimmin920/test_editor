@@ -10,7 +10,6 @@ export default function Block({ block, layout }) {
 
   const MappedBlock = blocks.get(blockName);
 
-  console.log(layout);
   return (
     <MappedBlock 
       contents={contents}

@@ -1,70 +1,109 @@
-import React from 'react';
-import styled, { css } from 'styled-components';
-import Block from './Block';
+import React from "react";
+import styled, { css } from "styled-components";
+import Block from "./Block";
+import sections from "./sections";
 
-export default function Section({ section }) {
-  const { 
+export default function Section({ section, childrenStyle, style }) {
+  const {
+    sectionName,
     blocks,
     styles,
-    layout: {
-      isGrid,
-      columns,
-      rows,
-      unit,
-      self: { width, height },
-    },
+    hasInnerSection,
+    layout,
+    childrenLayout,
   } = section;
 
-  const isColumns = columns.length > 0;
+  // const { layoutStyles, isGrid, isColumn, columns, rows, unit } =
+  //   getLayoutStyles(section?.layout);
 
-  function getLayout(index) {
-    const temp = {};
+  const NamedSection = sections.get(sectionName);
 
-    if (isColumns) {
-      temp['height'] = columns[index] + unit;
-    } else {
-      temp['width'] = rows[index] + unit;
-    }
-  
-    return temp;
+  const childrenLayoutStyle = getChildrenLayoutStyle(childrenLayout);
+
+  const hasChildrenLayout = childrenLayoutStyle.length > 0;
+
+  if (hasInnerSection) {
+    const { innerSections } = section;
+    return (
+      <NamedSection style={{ ...styles, ...getLayoutStyles(layout), ...childrenStyle }}>
+        {innerSections.map((section, index) => (
+          <Section
+            section={section}
+            childrenStyle={hasChildrenLayout && childrenLayoutStyle[index]}
+          />
+        ))}
+      </NamedSection>
+    );
   }
 
   return (
-    <S_Section
-      style={{ ...styles, width, height }}
-      isGrid={isGrid}
-      unit={unit}
-      columns={columns}
-      rows={rows}
+    <NamedSection
+      style={{ ...styles, ...getLayoutStyles(layout), ...childrenStyle }}
     >
-      {blocks.map((block, index) => <Block block={block} layout={getLayout(index)} />)}
-    </S_Section>
-  )
+      {blocks.map((block) => (
+        <Block block={block} />
+      ))}
+    </NamedSection>
+  );
+}
+
+function getChildrenLayoutStyle(data, flexType) {
+  if (!data) {
+    return [];
+  }
+
+  const key = flexType === "FLEX_COLUMN" ? "height" : "width";
+
+  const { ratios } = data;
+
+  return ratios.map((each) => {
+    return {
+      [key]: each.value + each.unit,
+    };
+  });
+}
+
+function getLayoutStyles(data) {
+  if (!data) {
+    return {};
+  }
+
+  return {
+    width: data.width.value + data.width.unit || "auto",
+    height: data.height.value + data.height.unit || "auto",
+  };
+}
+
+function getWidthHeight(value, unit, isColumn) {
+  if (!value) {
+    return {
+      width: "auto",
+      height: "auto",
+    };
+  }
+  if (isColumn) {
+    return {
+      height: value + unit,
+      width: "auto",
+    };
+  } else {
+    return {
+      width: value + unit,
+      height: "auto",
+    };
+  }
 }
 
 const S_Section = styled.div`
-  ${({ isGrid }) => isGrid ? 
-    css `
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-	    grid-template-rows: repeat(3, minmax(100px, auto));
-    `
-    : css `
-      display: flex;
-    `
-  };
-  
-  ${({ columns, unit }) => { 
-    if (columns.length < 0) {
-      return;
-    }
-
-    return css`
-      flex-direction: column;
-  `}};
-
-  ${({ rows }) => rows.length > 0 &&
-    css`
-      flex-direction: row;  
-  `};
+  ${({ isGrid, isColumn }) =>
+    isGrid
+      ? css`
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          grid-template-rows: repeat(3, minmax(100px, auto));
+        `
+      : css`
+          display: flex;
+          flex-direction: ${isColumn ? "column" : "row"};
+        `};
 `;

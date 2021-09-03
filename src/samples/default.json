@@ -2,9 +2,9 @@
 	"page": {
 		"id": "1",
 		"background": {
-			"imgSrc": "https://images.pexels.com/photos/255379/pexels-photo-255379.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+			"imgSrc": "https://contents.sixshop.com/thumbnails/uploadedFiles/56465/post/image_1626520384879_750.jpg",
 		  "backgroundRepeat": "no-repeat",
-			"backgroundSize": "cover"
+			"backgroundSize": "contain"
 		},
 		"theme": "FUN_COOL_SEXY",
 		"styles": {
@@ -53,9 +53,9 @@
 						"childrenLayout": {
 							"num": 3,
 							"ratios" : [
-								{ "value": 60, "unit": "%"},
-								{ "value": 10, "unit": "%"},
-								{ "value": 30, "unit": "%"}
+								{ "value": 20, "unit": "%"},
+								{ "value": 40, "unit": "%"},
+								{ "value": 40, "unit": "%"}
 							]
 						},
 						"innerSections": [
@@ -71,7 +71,7 @@
 										"blockName": "TITLE",
 										"contents": {
 											"type": "text",
-											"value": "THIS IS INNER TITLE!!!"
+											"value": "THIS IS INNER TITLE222222!!!"
 										},
 										"styles": {
 											"color": "black",

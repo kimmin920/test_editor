@@ -6,11 +6,7 @@
 		  "backgroundRepeat": "no-repeat",
 			"backgroundSize": "cover"
 		},
-		"layout": {
-			"isGrid": true,
-			"columns": [1,1,1,1,1,1,1,1,1],
-			"rows": []
-		},
+		"theme": "FUN_COOL_SEXY",
 		"styles": {
 			"padding": "3rem",
 			"border": "3rem solid green"
@@ -31,8 +27,8 @@
 				"childrenLayout": {
 					"num": 2,
 					"ratios" : [
-						{ "value": 40, "unit": "%"},
-						{ "value": 60, "unit": "%"}
+						{ "value": 30, "unit": "%" },
+						{ "value": 70, "unit": "%" }
 				  ]
 				},
 				"layout" : {
@@ -49,35 +45,71 @@
 				"innerSections": [
 					{
 						"sectionName": "FLEX_ROW",
-						"hasInnerSection": false,
+						"hasInnerSection": true,
 						"styles": {
 							"backgroundColor": "skyblue",
 							"border": "1rem solid red"
 						},
-						"blocks": [
+						"childrenLayout": {
+							"num": 3,
+							"ratios" : [
+								{ "value": 60, "unit": "%"},
+								{ "value": 10, "unit": "%"},
+								{ "value": 30, "unit": "%"}
+							]
+						},
+						"innerSections": [
 							{
-								"blockName": "TITLE",
-								"contents": {
-									"type": "text",
-									"value": "THIS IS INNER TITLE!!!"
-								},
+								"sectionName": "FLEX_COLUMN",
+								"hasInnerSection": false,
 								"styles": {
-									"color": "black",
-									"backgroundColor": "white"
-								}
-							}, 
-							{
-								"blockName": "DESCRIPTION",
-								"contents": {
-									"type": "html",
-									"value": "<p>'color:red'</p>"
-								}
+									"backgroundColor": "lightgrey",
+									"border": ".5rem solid grey"
+								},
+								"blocks": [
+									{
+										"blockName": "TITLE",
+										"contents": {
+											"type": "text",
+											"value": "THIS IS INNER TITLE!!!"
+										},
+										"styles": {
+											"color": "black",
+											"backgroundColor": "white"
+										}
+									}, 
+									{
+										"blockName": "DESCRIPTION",
+										"contents": {
+											"type": "html",
+											"value": "<p>'color:red'</p>"
+										}
+									},
+									{
+										"blockName": "SPACER",
+										"styles": {
+											"backgroundColor": "pink"
+										}
+									}
+								]
 							},
 							{
-								"blockName": "SPACER",
+								"sectionName": "FLEX_ROW",
+								"hasInnerSection": false,
 								"styles": {
-									"backgroundColor": "pink"
-								}
+									"backgroundColor": "skyblue",
+									"border": ".3rem solid purple"
+								},
+								"blocks": []
+							},
+							{
+								"sectionName": "FLEX_ROW",
+								"hasInnerSection": false,
+								"styles": {
+									"backgroundColor": "skyblue",
+									"border": ".3rem solid yellow"
+								},
+								"blocks": []
 							}
 						]
 					},

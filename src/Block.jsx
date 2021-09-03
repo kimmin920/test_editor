@@ -1,7 +1,7 @@
 import React from 'react'
 import blocks from './blocks';
 
-export default function Block({ block, layout }) {
+export default function Block({ block, layout, childrenStyle }) {
   const {
     blockName,
     contents,
@@ -16,6 +16,7 @@ export default function Block({ block, layout }) {
       styles={{
         ...styles,
         ...layout,
+        ...childrenStyle
       }}
     />
   )

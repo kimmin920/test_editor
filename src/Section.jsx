@@ -25,11 +25,11 @@ export default function Section({ section, childrenStyle, style }) {
   if (hasInnerSection) {
     const { innerSections } = section;
     return (
-      <NamedSection style={{ ...styles, ...getLayoutStyles(layout), ...childrenStyle }}>
+      <NamedSection style={{ ...styles, ...getLayoutStyles(layout), ...style }}>
         {innerSections.map((section, index) => (
           <Section
             section={section}
-            childrenStyle={hasChildrenLayout && childrenLayoutStyle[index]}
+            style={childrenLayoutStyle[index]}
           />
         ))}
       </NamedSection>
@@ -38,10 +38,13 @@ export default function Section({ section, childrenStyle, style }) {
 
   return (
     <NamedSection
-      style={{ ...styles, ...getLayoutStyles(layout), ...childrenStyle }}
+      style={{ ...styles, ...getLayoutStyles(layout), ...style }}
     >
-      {blocks.map((block) => (
-        <Block block={block} />
+      {blocks.map((block, index) => (
+        <Block 
+          block={block}
+          childrenStyle={childrenLayoutStyle[index] || {}}
+        />
       ))}
     </NamedSection>
   );

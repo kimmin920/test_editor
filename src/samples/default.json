@@ -6,7 +6,7 @@
 		  "backgroundRepeat": "no-repeat",
 			"backgroundSize": "contain"
 		},
-		"theme": "FUN_COOL_SEXY",
+		"theme": "MARBLES",
 		"styles": {
 			"padding": "3rem",
 			"border": "3rem solid green"
@@ -17,6 +17,15 @@
 		},
 		"footer": {
 			"sourceType": "section"
+		},
+		"childrenLayout": {
+			"num": 4,
+			"ratios" : [
+				{ "value": 10, "unit": "%" },
+				{ "value": 40, "unit": "%" },
+				{ "value": 10, "unit": "%" },
+				{ "value": 40, "unit": "%" }
+			]
 		},
 		"sections": [
 			{
@@ -29,7 +38,7 @@
 					"ratios" : [
 						{ "value": 30, "unit": "%" },
 						{ "value": 70, "unit": "%" }
-				  ]
+					]
 				},
 				"layout" : {
 					"height": {
@@ -67,6 +76,17 @@
 									"border": ".5rem solid grey"
 								},
 								"blocks": [
+									{
+										"blockName": "API_IMAGE",
+										"contents": {
+											"type": "api",
+											"value": "https://api.thecatapi.com/v1/images/search?size=full"
+										},
+										"styles": {
+											"color": "black",
+											"backgroundColor": "white"
+										}
+									},
 									{
 										"blockName": "TITLE",
 										"contents": {
@@ -152,6 +172,33 @@
 				"blocks": [{
 					"blockName": "SPACER"
 				}]
+			},
+			{
+				"blocks": [{
+					"blockName": "API_IMAGE",
+					"contents": {
+						"type": "api",
+						"value": "https://api.thecatapi.com/v1/images/search?size=full"
+					},
+					"styles": {
+						"color": "black",
+						"backgroundColor": "white",
+						"maxWidth": "500px"
+					}
+				},
+			  {
+					"blockName": "GALLERY",
+					"contents": {
+						"type": "array",
+						"value": ["1", "2", "3", "4", "5"]
+					},
+					"styles": {
+						"color": "black",
+						"backgroundColor": "white",
+						"maxWidth": "500px"
+					}
+				}
+			]
 			},
 			{
 				"sectionName": "FLEX_ROW",

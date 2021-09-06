@@ -1,13 +1,15 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import Page from './Page';
 import styled from 'styled-components';
-import pageData from './samples/default.json';
+import { PageContext } from './context/PageContext';
 
 
 function App() {
+  const { page } = useContext(PageContext);
+
   return (
     <S_App>
-      <Page pageData={pageData.page} />
+      <Page pageData={page} />
     </S_App>
   );
 }

@@ -26,27 +26,27 @@ export default function Section({ section, childrenStyle, style }) {
     const { innerSections } = section;
     return (
       <NamedSection style={{ ...styles, ...getLayoutStyles(layout), ...style }}>
-        {innerSections.map((section, index) => (
-          <Section
-            section={section}
-            style={childrenLayoutStyle[index]}
-          />
-        ))}
+          {innerSections.map((section, index) => (
+            <Section
+              section={section}
+              style={childrenLayoutStyle[index]}
+            />
+          ))}
       </NamedSection>
     );
   }
 
   return (
-    <NamedSection
-      style={{ ...styles, ...getLayoutStyles(layout), ...style }}
-    >
-      {blocks.map((block, index) => (
-        <Block 
-          block={block}
-          childrenStyle={childrenLayoutStyle[index] || {}}
-        />
-      ))}
-    </NamedSection>
+      <NamedSection
+        style={{ ...styles, ...getLayoutStyles(layout), ...style }}
+      >
+        {blocks.map((block, index) => (
+          <Block 
+            block={block}
+            childrenStyle={childrenLayoutStyle[index] || {}}
+          />
+        ))}
+      </NamedSection>
   );
 }
 

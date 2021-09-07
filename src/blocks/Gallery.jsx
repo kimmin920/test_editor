@@ -1,33 +1,32 @@
-import React from 'react'
-import styled from 'styled-components'
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import React from "react";
+import Slider from "react-slick";
+import ApiImg from "./ApiImg";
 
 export default function Gallery({ contents, styles }) {
   const { value } = contents;
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoPlay: 1,
+  };
 
   return (
-    <S_Gallery>
-      {value.map(each => <Cell />)}
-    </S_Gallery>
-  )
+    <Slider {...settings} style={styles}>
+      {value.map((each) => (
+        <ApiImg
+          contents={each}
+          styles={{
+            width: "100%",
+            height: "100%",
+            margin: "auto",
+          }}
+        />
+      ))}
+    </Slider>
+  );
 }
-
-const S_Gallery = styled.div`
-
-`;
-
-const Cell = styled.div`
-  width: 66%;
-  height: 200px;
-  margin-right: 10px;
-  background: #8C8;
-  counter-increment: gallery-cell;
-
-  ::before {
-    display: block;
-    text-align: center;
-    content: counter(gallery-cell);
-    line-height: 200px;
-    font-size: 80px;
-    color: white;
-  }
-`;

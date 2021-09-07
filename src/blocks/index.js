@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import ApiImg from './ApiImg';
 import Description from './Description';
 import Gallery from './Gallery';

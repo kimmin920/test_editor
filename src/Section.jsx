@@ -6,6 +6,7 @@ import sections from "./sections";
 export default function Section({ section, childrenStyle, style }) {
   const {
     sectionName,
+    flexDirection,
     blocks,
     styles,
     hasInnerSection,
@@ -13,12 +14,9 @@ export default function Section({ section, childrenStyle, style }) {
     childrenLayout,
   } = section;
 
-  // const { layoutStyles, isGrid, isColumn, columns, rows, unit } =
-  //   getLayoutStyles(section?.layout);
-
   const NamedSection = sections.get(sectionName);
 
-  const childrenLayoutStyle = getChildrenLayoutStyle(childrenLayout);
+  const childrenLayoutStyle = getChildrenLayoutStyle(childrenLayout, flexDirection);
 
   const hasChildrenLayout = childrenLayoutStyle.length > 0;
 
@@ -41,7 +39,7 @@ export default function Section({ section, childrenStyle, style }) {
         style={{ ...styles, ...getLayoutStyles(layout), ...style }}
       >
         {blocks.map((block, index) => (
-          <Block 
+          <Block
             block={block}
             childrenStyle={childrenLayoutStyle[index] || {}}
           />

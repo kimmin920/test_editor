@@ -1,340 +1,510 @@
 {
-	"page": {
-		"id": "1",
-		"background": {
-			"imgSrc": "https://contents.sixshop.com/thumbnails/uploadedFiles/56465/post/image_1626520384879_750.jpg",
-		  "backgroundRepeat": "no-repeat",
-			"backgroundSize": "contain"
-		},
-		"theme": "MARBLES",
-		"styles": {
-			"padding": "3rem",
-			"border": "3rem solid green"
-		},
-		"engine": "VISUAL",
-		"header": {
-			"sourceType": "section"
-		},
-		"footer": {
-			"sourceType": "section"
-		},
-		"childrenLayout": {
-			"num": 4,
-			"ratios" : [
-				{ "value": 10, "unit": "%" },
-				{ "value": 40, "unit": "%" },
-				{ "value": 10, "unit": "%" },
-				{ "value": 40, "unit": "%" }
-			]
-		},
-		"sections": [
+  "page": {
+    "id": "1",
+    "background": {
+      "imgSrc": "https://picsum.photos/200/300",
+      "backgroundRepeat": "no-repeat",
+      "backgroundSize": "cover"
+    },
+    "theme": "MARBLES",
+    "styles": {
+      "padding": "1rem",
+      "border": "1rem solid green",
+      "width": "100%",
+      "height": "100%"
+    },
+    "engine": "VISUAL",
+    "header": {
+      "sourceType": "section"
+    },
+    "footer": {
+      "sourceType": "section"
+    },
+    "childrenLayout": {
+      "num": 5,
+      "ratios": [
+        { "value": 10, "unit": "%" },
+        { "value": 10, "unit": "%" },
+        { "value": 10, "unit": "%" },
+        { "value": 10, "unit": "%" },
+        { "value": 60, "unit": "%" }
+      ]
+    },
+    "sections": [
 			{
-				"sectionName": "FLEX_ROW",
-				"styles": {
-					"border": "1rem solid orange"
-				},
-				"childrenLayout": {
-					"num": 2,
-					"ratios" : [
-						{ "value": 30, "unit": "%" },
-						{ "value": 70, "unit": "%" }
-					]
-				},
-				"layout" : {
-					"height": {
-						"unit": "px",
-						"value": 500
-					},
-					"width": {
-						"unit": "%",
-						"value": 100
-					}
-				},
+        "sectionName": "LIST",
+				"flexDirection": "FLEX_COLUMN",
 				"hasInnerSection": true,
+				"styles": {
+					"display": "flex",
+					"flexDirection": "row"
+				},
 				"innerSections": [
 					{
-						"sectionName": "FLEX_ROW",
-						"hasInnerSection": true,
-						"styles": {
-							"backgroundColor": "skyblue",
-							"border": "1rem solid red"
-						},
+						"sectionName": "CARD",
+						"flexDirection": "FLEX_COLUMN",
 						"childrenLayout": {
 							"num": 3,
-							"ratios" : [
-								{ "value": 20, "unit": "%"},
-								{ "value": 40, "unit": "%"},
-								{ "value": 40, "unit": "%"}
+							"ratios": [
+								{ "value": 10, "unit": "%" },
+								{ "value": 40, "unit": "%" },
+								{ "value": 50, "unit": "%" }
 							]
-						},
-						"innerSections": [
-							{
-								"sectionName": "FLEX_COLUMN",
-								"hasInnerSection": false,
-								"styles": {
-									"backgroundColor": "lightgrey",
-									"border": ".5rem solid grey"
-								},
-								"blocks": [
-									{
-										"blockName": "API_IMAGE",
-										"contents": {
-											"type": "api",
-											"value": "https://api.thecatapi.com/v1/images/search?size=full"
-										},
-										"styles": {
-											"color": "black",
-											"backgroundColor": "white"
-										}
-									},
-									{
-										"blockName": "TITLE",
-										"contents": {
-											"type": "text",
-											"value": "THIS IS INNER TITLE222222!!!"
-										},
-										"styles": {
-											"color": "black",
-											"backgroundColor": "white"
-										}
-									}, 
-									{
-										"blockName": "DESCRIPTION",
-										"contents": {
-											"type": "html",
-											"value": "<p>'color:red'</p>"
-										}
-									},
-									{
-										"blockName": "SPACER",
-										"styles": {
-											"backgroundColor": "pink"
-										}
-									}
-								]
-							},
-							{
-								"sectionName": "FLEX_ROW",
-								"hasInnerSection": false,
-								"styles": {
-									"backgroundColor": "skyblue",
-									"border": ".3rem solid purple"
-								},
-								"blocks": []
-							},
-							{
-								"sectionName": "FLEX_ROW",
-								"hasInnerSection": false,
-								"styles": {
-									"backgroundColor": "skyblue",
-									"border": ".3rem solid yellow"
-								},
-								"blocks": []
-							}
-						]
-					},
-					{
-						"sectionName": "FLEX_COLUMN",
-						"hasInnerSection": false,
-						"styles": {
-							"backgroundColor": "skyblue",
-							"border": "1rem solid black"
 						},
 						"blocks": [
 							{
 								"blockName": "TITLE",
 								"contents": {
 									"type": "text",
-									"value": "THIS IS INNER TITLE22222222!!!"
+									"value": "THIS IS CARD TITLE!!!"
 								},
 								"styles": {
-									"color": "black",
-									"backgroundColor": "white"
+									"color": "white",
+									"backgroundColor": "silver",
+									"textAlign": "center"
 								}
-							}, 
+							},
+							{
+								"blockName": "API_IMAGE",
+								"contents": {
+									"type": "api",
+									"value": "https://api.thecatapi.com/v1/images/search?size=full"
+								},
+								"styles": {
+									"objectFit": "cover"
+								}
+							},
 							{
 								"blockName": "DESCRIPTION",
 								"contents": {
 									"type": "html",
-									"value": "<p>'color:red'</p>"
+									"value": "<p>Since then eSports has been steadily <b>developing</b>, <span style='color:red'>but</span> in the beginning of the 21st century its popularity skyrocketed, thanks to newly introduced games such as <a href='https://en.wikipedia.org/wiki/Counter-Strike'><span data-comment='thread-1'>Counter-Strike</span></a><span class='ck-comment-marker' data-comment='thread-1'>, </span><a href='https://en.wikipedia.org/wiki/Quake_(video_game)'><span class='ck-comment-marker' data-comment='thread-1'>Quake</span></a><span class='ck-comment-marker' data-comment='thread-1'>, and </span><a href='https://en.wikipedia.org/wiki/StarCraft_(video_game)'><span class='ck-comment-marker' data-comment='thread-1'>Starcraft</span></a>.</p>"
+								}
+							}
+						]
+					},
+					{
+						"sectionName": "CARD",
+						"flexDirection": "FLEX_COLUMN",
+						"childrenLayout": {
+							"num": 3,
+							"ratios": [
+								{ "value": 10, "unit": "%" },
+								{ "value": 40, "unit": "%" },
+								{ "value": 50, "unit": "%" }
+							]
+						},
+						"blocks": [
+							{
+								"blockName": "TITLE",
+								"contents": {
+									"type": "text",
+									"value": "THIS IS CARD TITLE!!!"
+								},
+								"styles": {
+									"color": "white",
+									"backgroundColor": "silver",
+									"textAlign": "center"
 								}
 							},
 							{
-								"blockName": "SPACER",
+								"blockName": "API_IMAGE",
+								"contents": {
+									"type": "api",
+									"value": "https://api.thecatapi.com/v1/images/search?size=full"
+								},
 								"styles": {
-									"backgroundColor": "pink"
+									"objectFit": "cover"
+								}
+							},
+							{
+								"blockName": "DESCRIPTION",
+								"contents": {
+									"type": "html",
+									"value": "<p>Since then eSports has been steadily <b>developing</b>, <span style='color:red'>but</span> in the beginning of the 21st century its popularity skyrocketed, thanks to newly introduced games such as <a href='https://en.wikipedia.org/wiki/Counter-Strike'><span data-comment='thread-1'>Counter-Strike</span></a><span class='ck-comment-marker' data-comment='thread-1'>, </span><a href='https://en.wikipedia.org/wiki/Quake_(video_game)'><span class='ck-comment-marker' data-comment='thread-1'>Quake</span></a><span class='ck-comment-marker' data-comment='thread-1'>, and </span><a href='https://en.wikipedia.org/wiki/StarCraft_(video_game)'><span class='ck-comment-marker' data-comment='thread-1'>Starcraft</span></a>.</p>"
 								}
 							}
 						]
 					}
-				]
-			},{
-				"blocks": [{
-					"blockName": "SPACER"
-				}]
-			},
-			{
-				"blocks": [{
-					"blockName": "API_IMAGE",
-					"contents": {
-						"type": "api",
-						"value": "https://api.thecatapi.com/v1/images/search?size=full"
-					},
-					"styles": {
-						"color": "black",
-						"backgroundColor": "white",
-						"maxWidth": "500px"
-					}
-				},
-			  {
-					"blockName": "GALLERY",
-					"contents": {
-						"type": "array",
-						"value": ["1", "2", "3", "4", "5"]
-					},
-					"styles": {
-						"color": "black",
-						"backgroundColor": "white",
-						"maxWidth": "500px"
-					}
+				],
+				"childrenLayout": {
+          "num": 3,
+          "ratios": [
+            { "value": 10, "unit": "%" },
+            { "value": 40, "unit": "%" },
+						{ "value": 50, "unit": "%" }
+          ]
 				}
-			]
 			},
-			{
-				"sectionName": "FLEX_ROW",
-				"layout" : {
-					"height": {
-						"unit": "px",
-						"value": 400
-					},
-					"width": {
-						"unit": "%",
-						"value": 100
-					},
-					"isGrid": false,
-					"columns": [],
-					"rows": [1, 2, 3]
-				},
-				"blocks": [
-					{
-						"blockName": "TITLE",
-						"contents": {
-							"type": "text",
-							"value": "THIS IS SAMPLE TEXT!!!"
-						},
+      {
+        "sectionName": "CARD",
+				"flexDirection": "FLEX_COLUMN",
+				"childrenLayout": {
+          "num": 3,
+          "ratios": [
+            { "value": 10, "unit": "%" },
+            { "value": 40, "unit": "%" },
+						{ "value": 50, "unit": "%" }
+          ]
+        },
+        "blocks": [
+          {
+            "blockName": "TITLE",
+            "contents": {
+              "type": "text",
+              "value": "THIS IS CARD TITLE!!!"
+            },
+            "styles": {
+              "color": "white",
+              "backgroundColor": "silver",
+							"textAlign": "center"
+            }
+          },
+          {
+            "blockName": "API_IMAGE",
+            "contents": {
+              "type": "api",
+              "value": "https://api.thecatapi.com/v1/images/search?size=full"
+            },
 						"styles": {
-							"color": "red",
-							"backgroundColor": "blue"
+							"objectFit": "cover"
 						}
-					},
-					{
-						"blockName": "DESCRIPTION",
-						"contents": {
-							"type": "text",
-							"value": "THIS IS SAMPLE DESC!"
-						},
-						"styles": {
-							"color": "orange",
-							"backgroundColor": "black"
-						}
-					}, 
-					{
-						"blockName": "DESCRIPTION",
-						"contents": {
-							"type": "html",
-							"value": "<p>Since then eSports has been steadily <b>developing</b>, <span style='color:red'>but</span> in the beginning of the 21st century its popularity skyrocketed, thanks to newly introduced games such as <a href='https://en.wikipedia.org/wiki/Counter-Strike'><span data-comment='thread-1'>Counter-Strike</span></a><span class='ck-comment-marker' data-comment='thread-1'>, </span><a href='https://en.wikipedia.org/wiki/Quake_(video_game)'><span class='ck-comment-marker' data-comment='thread-1'>Quake</span></a><span class='ck-comment-marker' data-comment='thread-1'>, and </span><a href='https://en.wikipedia.org/wiki/StarCraft_(video_game)'><span class='ck-comment-marker' data-comment='thread-1'>Starcraft</span></a>.</p>"
-						}
-					},
-					{
-						"blockName": "SPACER",
-						"styles": {
-							"backgroundColor": "pink"
-						}
-					}
-				]
-			},
-			{
-				"sectionName": "GRID",
-				"layout" : {
-					"height": {
-						"unit": "px",
-						"value": 400
-					},
-					"width": {
-						"unit": "%",
-						"value": 100
-					},
-					"isGrid": true,
-					"columns": [],
-					"rows": []
-				},
-				"blocks": [
-					{
-						"blockName": "TITLE",
-						"contents": {
-							"type": "text",
-							"value": "THIS IS SAMPLE TEXT!!!"
-						},
-						"styles": {
-							"color": "red",
-							"backgroundColor": "blue"
-						}
-					},
-					{
-						"blockName": "DESCRIPTION",
-						"contents": {
-							"type": "text",
-							"value": "THIS IS SAMPLE DESC!"
-						},
-						"styles": {
-							"color": "orange",
-							"backgroundColor": "black"
-						}
-					}, 
-					{
-						"blockName": "DESCRIPTION",
-						"contents": {
-							"type": "html",
-							"value": "<p>Since then eSports has been steadily <b>developing</b>, <span style='color:red'>but</span> in the beginning of the 21st century its popularity skyrocketed, thanks to newly introduced games such as <a href='https://en.wikipedia.org/wiki/Counter-Strike'><span data-comment='thread-1'>Counter-Strike</span></a><span class='ck-comment-marker' data-comment='thread-1'>, </span><a href='https://en.wikipedia.org/wiki/Quake_(video_game)'><span class='ck-comment-marker' data-comment='thread-1'>Quake</span></a><span class='ck-comment-marker' data-comment='thread-1'>, and </span><a href='https://en.wikipedia.org/wiki/StarCraft_(video_game)'><span class='ck-comment-marker' data-comment='thread-1'>Starcraft</span></a>.</p>"
-						}
-					},
-					{
-						"blockName": "TITLE",
-						"contents": {
-							"type": "text",
-							"value": "THIS IS SAMPLE TEXT!!!"
-						},
-						"styles": {
-							"color": "red",
-							"backgroundColor": "blue"
-						}
-					},
-					{
-						"blockName": "DESCRIPTION",
-						"contents": {
-							"type": "text",
-							"value": "THIS IS SAMPLE DESC!"
-						},
-						"styles": {
-							"color": "orange",
-							"backgroundColor": "black"
-						}
-					}, 
-					{
-						"blockName": "DESCRIPTION",
-						"contents": {
-							"type": "html",
-							"value": "<p>Since then eSports has been steadily <b>developing</b>, <span style='color:red'>but</span> in the beginning of the 21st century its popularity skyrocketed, thanks to newly introduced games such as <a href='https://en.wikipedia.org/wiki/Counter-Strike'><span data-comment='thread-1'>Counter-Strike</span></a><span class='ck-comment-marker' data-comment='thread-1'>, </span><a href='https://en.wikipedia.org/wiki/Quake_(video_game)'><span class='ck-comment-marker' data-comment='thread-1'>Quake</span></a><span class='ck-comment-marker' data-comment='thread-1'>, and </span><a href='https://en.wikipedia.org/wiki/StarCraft_(video_game)'><span class='ck-comment-marker' data-comment='thread-1'>Starcraft</span></a>.</p>"
-						}
-					},
-					{
-						"blockName": "SPACER",
-						"styles": {
-							"backgroundColor": "pink"
-						}
-					}
-				]
-			}
-		]
-	}
+          },
+          {
+            "blockName": "DESCRIPTION",
+            "contents": {
+              "type": "html",
+              "value": "<p>Since then eSports has been steadily <b>developing</b>, <span style='color:red'>but</span> in the beginning of the 21st century its popularity skyrocketed, thanks to newly introduced games such as <a href='https://en.wikipedia.org/wiki/Counter-Strike'><span data-comment='thread-1'>Counter-Strike</span></a><span class='ck-comment-marker' data-comment='thread-1'>, </span><a href='https://en.wikipedia.org/wiki/Quake_(video_game)'><span class='ck-comment-marker' data-comment='thread-1'>Quake</span></a><span class='ck-comment-marker' data-comment='thread-1'>, and </span><a href='https://en.wikipedia.org/wiki/StarCraft_(video_game)'><span class='ck-comment-marker' data-comment='thread-1'>Starcraft</span></a>.</p>"
+            }
+          }
+        ]
+      },
+      {
+        "sectionName": "FLEX_ROW",
+        "styles": {
+          "border": "1rem solid orange"
+        },
+        "childrenLayout": {
+          "num": 2,
+          "ratios": [
+            { "value": 30, "unit": "%" },
+            { "value": 70, "unit": "%" }
+          ]
+        },
+        "layout": {
+          "height": {
+            "unit": "px",
+            "value": 500
+          },
+          "width": {
+            "unit": "%",
+            "value": 100
+          }
+        },
+        "hasInnerSection": true,
+        "innerSections": [
+          {
+            "sectionName": "FLEX_ROW",
+            "hasInnerSection": true,
+            "styles": {
+              "backgroundColor": "skyblue",
+              "border": "1rem solid red"
+            },
+            "childrenLayout": {
+              "num": 3,
+              "ratios": [
+                { "value": 20, "unit": "%" },
+                { "value": 40, "unit": "%" },
+                { "value": 40, "unit": "%" }
+              ]
+            },
+            "innerSections": [
+              {
+                "sectionName": "FLEX_COLUMN",
+                "hasInnerSection": false,
+                "styles": {
+                  "backgroundColor": "lightgrey",
+                  "border": ".5rem solid grey"
+                },
+                "blocks": [
+                  {
+                    "blockName": "API_IMAGE",
+                    "contents": {
+                      "type": "api",
+                      "value": "https://api.thecatapi.com/v1/images/search?size=full"
+                    },
+                    "styles": {
+                      "color": "black",
+                      "backgroundColor": "white",
+											"objectFit": "cover",
+											"height": "200px"
+                    }
+                  },
+                  {
+                    "blockName": "TITLE",
+                    "contents": {
+                      "type": "text",
+                      "value": "THIS IS INNER TITLE222222!!!"
+                    },
+                    "styles": {
+                      "color": "black",
+                      "backgroundColor": "white"
+                    }
+                  },
+                  {
+                    "blockName": "DESCRIPTION",
+                    "contents": {
+                      "type": "html",
+                      "value": "<p>color:red</p>"
+                    }
+                  },
+                  {
+                    "blockName": "SPACER",
+                    "styles": {
+                      "backgroundColor": "pink"
+                    }
+                  }
+                ]
+              },
+              {
+                "sectionName": "FLEX_ROW",
+                "hasInnerSection": false,
+                "styles": {
+                  "backgroundColor": "skyblue",
+                  "border": ".3rem solid purple"
+                },
+                "blocks": []
+              },
+              {
+                "sectionName": "FLEX_ROW",
+                "hasInnerSection": false,
+                "styles": {
+                  "backgroundColor": "skyblue",
+                  "border": ".3rem solid yellow"
+                },
+                "blocks": []
+              }
+            ]
+          },
+          {
+            "sectionName": "FLEX_COLUMN",
+            "hasInnerSection": false,
+            "styles": {
+              "backgroundColor": "skyblue",
+              "border": "1rem solid black"
+            },
+            "blocks": [
+              {
+                "blockName": "TITLE",
+                "contents": {
+                  "type": "text",
+                  "value": "THIS IS INNER TITLE22222222!!!"
+                },
+                "styles": {
+                  "color": "black",
+                  "backgroundColor": "white"
+                }
+              },
+              {
+                "blockName": "DESCRIPTION",
+                "contents": {
+                  "type": "html",
+                  "value": "<p>'color:red'</p>"
+                }
+              },
+              {
+                "blockName": "API_IMAGE",
+                "contents": {
+                  "type": "api",
+                  "value": "https://api.thecatapi.com/v1/images/search?size=full"
+                },
+                "styles": {
+                  "color": "black",
+                  "backgroundColor": "white",
+                  "maxWidth": "500px",
+									"objectFit": "cover",
+									"height": "200px"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "blocks": [
+          {
+            "blockName": "SPACER"
+          }
+        ]
+      },
+      {
+        "blocks": [
+          {
+            "blockName": "GALLERY",
+            "contents": {
+              "type": "API_IMAGE",
+              "value": [
+                {
+                  "value": "https://api.thecatapi.com/v1/images/search?size=full"
+                },
+                {
+                  "value": "https://api.thecatapi.com/v1/images/search?size=full"
+                },
+                {
+                  "value": "https://api.thecatapi.com/v1/images/search?size=full"
+                },
+                {
+                  "value": "https://api.thecatapi.com/v1/images/search?size=full"
+                },
+                {
+                  "value": "https://api.thecatapi.com/v1/images/search?size=full"
+                }
+              ]
+            },
+            "styles": {
+              "color": "black",
+              "backgroundColor": "white",
+              "maxWidth": "500px",
+							"height": "300px"
+            }
+          }
+        ]
+      },
+      {
+        "sectionName": "FLEX_ROW",
+        "layout": {
+          "height": {
+            "unit": "px",
+            "value": 400
+          },
+          "width": {
+            "unit": "%",
+            "value": 100
+          },
+          "isGrid": false,
+          "columns": [],
+          "rows": [1, 2, 3]
+        },
+        "blocks": [
+          {
+            "blockName": "TITLE",
+            "contents": {
+              "type": "text",
+              "value": "THIS IS SAMPLE TEXT!!!"
+            },
+            "styles": {
+              "color": "red",
+              "backgroundColor": "blue"
+            }
+          },
+          {
+            "blockName": "DESCRIPTION",
+            "contents": {
+              "type": "text",
+              "value": "THIS IS SAMPLE DESC!"
+            },
+            "styles": {
+              "color": "orange",
+              "backgroundColor": "black"
+            }
+          },
+          {
+            "blockName": "DESCRIPTION",
+            "contents": {
+              "type": "html",
+              "value": "<p>Since then eSports has been steadily <b>developing</b>, <span style='color:red'>but</span> in the beginning of the 21st century its popularity skyrocketed, thanks to newly introduced games such as <a href='https://en.wikipedia.org/wiki/Counter-Strike'><span data-comment='thread-1'>Counter-Strike</span></a><span class='ck-comment-marker' data-comment='thread-1'>, </span><a href='https://en.wikipedia.org/wiki/Quake_(video_game)'><span class='ck-comment-marker' data-comment='thread-1'>Quake</span></a><span class='ck-comment-marker' data-comment='thread-1'>, and </span><a href='https://en.wikipedia.org/wiki/StarCraft_(video_game)'><span class='ck-comment-marker' data-comment='thread-1'>Starcraft</span></a>.</p>"
+            }
+          },
+          {
+            "blockName": "SPACER",
+            "styles": {
+              "backgroundColor": "pink"
+            }
+          }
+        ]
+      },
+      {
+        "sectionName": "GRID",
+        "layout": {
+          "height": {
+            "unit": "px",
+            "value": 400
+          },
+          "width": {
+            "unit": "%",
+            "value": 100
+          },
+          "isGrid": true,
+          "columns": [],
+          "rows": []
+        },
+        "blocks": [
+          {
+            "blockName": "TITLE",
+            "contents": {
+              "type": "text",
+              "value": "THIS IS SAMPLE TEXT!!!"
+            },
+            "styles": {
+              "color": "red",
+              "backgroundColor": "blue"
+            }
+          },
+          {
+            "blockName": "DESCRIPTION",
+            "contents": {
+              "type": "text",
+              "value": "THIS IS SAMPLE DESC!"
+            },
+            "styles": {
+              "color": "orange",
+              "backgroundColor": "black"
+            }
+          },
+          {
+            "blockName": "DESCRIPTION",
+            "contents": {
+              "type": "html",
+              "value": "<p>Since then eSports has been steadily <b>developing</b>, <span style='color:red'>but</span> in the beginning of the 21st century its popularity skyrocketed, thanks to newly introduced games such as <a href='https://en.wikipedia.org/wiki/Counter-Strike'><span data-comment='thread-1'>Counter-Strike</span></a><span class='ck-comment-marker' data-comment='thread-1'>, </span><a href='https://en.wikipedia.org/wiki/Quake_(video_game)'><span class='ck-comment-marker' data-comment='thread-1'>Quake</span></a><span class='ck-comment-marker' data-comment='thread-1'>, and </span><a href='https://en.wikipedia.org/wiki/StarCraft_(video_game)'><span class='ck-comment-marker' data-comment='thread-1'>Starcraft</span></a>.</p>"
+            }
+          },
+          {
+            "blockName": "TITLE",
+            "contents": {
+              "type": "text",
+              "value": "THIS IS SAMPLE TEXT!!!"
+            },
+            "styles": {
+              "color": "red",
+              "backgroundColor": "blue"
+            }
+          },
+          {
+            "blockName": "DESCRIPTION",
+            "contents": {
+              "type": "text",
+              "value": "THIS IS SAMPLE DESC!"
+            },
+            "styles": {
+              "color": "orange",
+              "backgroundColor": "black"
+            }
+          },
+          {
+            "blockName": "DESCRIPTION",
+            "contents": {
+              "type": "html",
+              "value": "<p>Since then eSports has been steadily <b>developing</b>, <span style='color:red'>but</span> in the beginning of the 21st century its popularity skyrocketed, thanks to newly introduced games such as <a href='https://en.wikipedia.org/wiki/Counter-Strike'><span data-comment='thread-1'>Counter-Strike</span></a><span class='ck-comment-marker' data-comment='thread-1'>, </span><a href='https://en.wikipedia.org/wiki/Quake_(video_game)'><span class='ck-comment-marker' data-comment='thread-1'>Quake</span></a><span class='ck-comment-marker' data-comment='thread-1'>, and </span><a href='https://en.wikipedia.org/wiki/StarCraft_(video_game)'><span class='ck-comment-marker' data-comment='thread-1'>Starcraft</span></a>.</p>"
+            }
+          },
+          {
+            "blockName": "SPACER",
+            "styles": {
+              "backgroundColor": "pink"
+            }
+          }
+        ]
+      }
+    ]
+  }
 }

@@ -1,0 +1,75 @@
+{
+  "page": {
+    "sections": [
+      {
+        "sectionName": "GRID",
+        "columnNum": "12",
+        "autoFill": true,
+        "autoFit": false,
+        "rows": [
+          {
+            "value": 1,
+            "unit": "fr"
+          },
+          {
+            "value": "10% 20px",
+            "unit": "minmax"
+          },
+          {
+            "value": "100",
+            "unit": "px"
+          },
+          {
+            "value": "",
+            "unit": "min-content"
+          },
+          {
+            "value": "",
+            "unit": "max-content"
+          }
+        ],
+        "columns": [
+          {
+            "value": 1,
+            "unit": "fr"
+          },
+          {
+            "value": "10% 20px",
+            "unit": "minmax"
+          },
+          {
+            "value": "100",
+            "unit": "px"
+          },
+          {
+            "value": "",
+            "unit": "min-content"
+          },
+          {
+            "value": "",
+            "unit": "max-content"
+          }
+        ],
+        "areas": [
+          "header header header . .",
+          "main sidebar sidebar . .",
+          "m z z . .",
+          "m z z . .",
+          ". . . . ." 
+        ],
+        "cells": [
+          {
+            "span": 4,
+            "rows": 2
+          },
+          {
+            "span": 4
+          },
+          {
+            "span": 4
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -12,20 +12,20 @@
             "unit": "fr"
           },
           {
-            "value": "10% 20px",
-            "unit": "minmax"
+            "value": 1,
+            "unit": "fr"
           },
           {
-            "value": "100",
-            "unit": "px"
+            "value": 1,
+            "unit": "fr"
           },
           {
-            "value": "",
-            "unit": "min-content"
+            "value": 1,
+            "unit": "fr"
           },
           {
-            "value": "",
-            "unit": "max-content"
+            "value": 1,
+            "unit": "fr"
           }
         ],
         "columns": [
@@ -34,28 +34,28 @@
             "unit": "fr"
           },
           {
-            "value": "10% 20px",
-            "unit": "minmax"
+            "value": 0.5,
+            "unit": "fr"
           },
           {
-            "value": "100",
+            "value": 150,
             "unit": "px"
           },
           {
             "value": "",
-            "unit": "min-content"
+            "unit": "max-content"
           },
           {
-            "value": "",
-            "unit": "max-content"
+            "value": "10%, 20px",
+            "unit": "minmax"
           }
         ],
         "areas": [
-          "header header header . .",
-          "main sidebar sidebar . .",
-          "m z z . .",
-          "m z z . .",
-          ". . . . ." 
+          "header header header header header",
+          "main main . . sidebar",
+          "main main . button sidebar",
+          "main main . . sidebar",
+          ". footer footer footer ." 
         ],
         "cells": [
           {

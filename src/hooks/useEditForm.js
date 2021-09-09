@@ -1,10 +1,15 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 export default function useEditForm(inputs, handleSubmitForm) {
   const [data, setData] = useState(inputs);
+  
+  useEffect(() => {
+    setData(inputs);
+  }, [inputs]);
 
   function handleChange(e) {
     const { name, value } = e.target;
+  
     setData((prev) => ({
       ...prev,
       [name]: value,

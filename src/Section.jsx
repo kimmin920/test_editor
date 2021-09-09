@@ -20,6 +20,10 @@ export default function Section({ section, childrenStyle, style }) {
 
   const hasChildrenLayout = childrenLayoutStyle.length > 0;
 
+  if (sectionName === 'GRID') {
+    return <NamedSection data={section} />
+  }
+
   if (hasInnerSection) {
     const { innerSections } = section;
     return (

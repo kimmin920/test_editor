@@ -55,18 +55,71 @@
           "main main . . sidebar",
           "main main . button sidebar",
           "main main . . sidebar",
-          ". footer footer footer ." 
+          ". footer footer footer ."
         ],
-        "cells": [
+        "blocks": [
           {
-            "span": 4,
-            "rows": 2
+            "blockName": "TITLE",
+            "contents": {
+              "type": "text",
+              "value": "THIS IS CARD HEADER LINE!!!"
+            },
+            "styles": {
+              "color": "white",
+              "gridArea": "header",
+              "backgroundColor": "silver",
+              "textAlign": "center"
+            }
           },
           {
-            "span": 4
+            "blockName": "TITLE",
+            "contents": {
+              "type": "text",
+              "value": "THIS IS CARD SIDEBAR!!!"
+            },
+            "styles": {
+              "color": "white",
+              "gridArea": "sidebar",
+              "backgroundColor": "gold",
+              "textAlign": "center"
+            }
           },
           {
-            "span": 4
+            "blockName": "TITLE",
+            "contents": {
+              "type": "text",
+              "value": "THIS IS CARD FOOTER!!!"
+            },
+            "styles": {
+              "color": "white",
+              "gridArea": "footer",
+              "backgroundColor": "tomato",
+              "textAlign": "center"
+            }
+          },
+          {
+            "blockName": "TITLE",
+            "contents": {
+              "type": "text",
+              "value": "THIS IS CARD MAIN!!!"
+            },
+            "styles": {
+              "color": "white",
+              "gridArea": "main",
+              "backgroundColor": "pink",
+              "textAlign": "center"
+            }
+          },
+          {
+            "blockName": "API_IMAGE",
+            "contents": {
+              "type": "api",
+              "value": "https://api.thecatapi.com/v1/images/search?size=full"
+            },
+            "styles": {
+              "objectFit": "cover",
+              "maxWidth": "-webkit-fill-available"
+            }
           }
         ]
       }

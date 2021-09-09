@@ -2,7 +2,7 @@ import React, { useReducer } from "react";
 
 export default function useGrid(data) {
   const [state, dispatch] = useReducer(reducer, data);
-  const { areas, autoFill, autoFit, cells, columnNum, columns, rows } = state;
+  const { areas, autoFill, autoFit, columnNum, columns, rows, blocks } = state;
 
   const gridStyle = {
     gridTemplateAreas: parseGridAreas(areas),
@@ -11,6 +11,7 @@ export default function useGrid(data) {
   }
 
   return {
+    blocks,
     gridStyle,
     areas,
     rows,

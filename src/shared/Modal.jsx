@@ -42,6 +42,7 @@ const ModalContainer = styled.div`
   box-shadow: 4px 17px 20px 0px rgb(0 0 0 / 8%);
   padding: 12px 12px;
   box-sizing: border-box;
+  width: fit-content;
 `;
 
 const ModalBackground = styled.div`

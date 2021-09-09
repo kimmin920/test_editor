@@ -5,6 +5,7 @@ import EditForm from "../shared/EditForm";
 import Modal from "../shared/Modal";
 import useModal from "../hooks/useModal";
 import { EditButton } from "../shared/EditButton";
+import { default as blocksMap } from '../blocks';
 
 export default function Grid({ data }) {
   const { isModalOpen, toggleModal, setModalOpen } = useModal();
@@ -18,29 +19,32 @@ export default function Grid({ data }) {
     addRow,
     changeColumns,
     changeRows,
+    blocks,
   } = useGrid(data);
-
-  function onSubmitArea(result) {
-    onChangeGridAreas(Object.values(result));
-  }
 
   return (
     <S_Box>
       <EditButton onClick={() => setModalOpen(true)}>EDIT GRID</EditButton>
       {isModalOpen && (
         <Modal title="Edit Grid" handleClose={() => setModalOpen(false)}>
-          <button onClick={addColumn}>Add column</button>
-          <button onClick={addRow}>Add row</button>
+          <S_Box>
+            <button onClick={addColumn}>Add column</button>
+            <button onClick={addRow}>Add row</button>
+          </S_Box>
           <S_Box>
             <EditForm
               title="edit areas"
               inputs={areas}
-              handleSubmitForm={onSubmitArea}
+              handleSubmitForm={(result) =>
+                onChangeGridAreas(Object.values(result))
+              }
             />
             <EditForm
               title="edit columns"
               inputs={columns}
-              handleSubmitForm={(result) => changeColumns(Object.values(result))}
+              handleSubmitForm={(result) =>
+                changeColumns(Object.values(result))
+              }
               isNestedInput
             />
             <EditForm
@@ -53,46 +57,10 @@ export default function Grid({ data }) {
         </Modal>
       )}
       <S_Grid style={gridStyle}>
-        <div
-          style={{
-            gridArea: "header",
-            background: "red",
-          }}
-        >
-          this is header!
-        </div>
-        <div
-          style={{
-            gridArea: "main",
-            background: "green",
-          }}
-        >
-          this is main!
-        </div>
-        <div
-          style={{
-            gridArea: "sidebar",
-            background: "yellow",
-          }}
-        >
-          this is sidebar
-        </div>
-        <div
-          style={{
-            gridArea: "footer",
-            background: "orange",
-          }}
-        >
-          this is footer!
-        </div>
-        <div
-          style={{
-            gridArea: "button",
-            background: "grey",
-          }}
-        >
-          this is button!
-        </div>
+        {blocks.map((each) => {
+          const MatchedBlock = blocksMap.get(each.blockName);
+          return <MatchedBlock contents={each.contents} styles={each.styles} />
+        })}
       </S_Grid>
     </S_Box>
   );

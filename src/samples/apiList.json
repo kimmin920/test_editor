@@ -12,7 +12,7 @@
             "unit": "fr"
           },
           {
-            "value": 1,
+            "value": 2,
             "unit": "fr"
           },
           {
@@ -25,6 +25,10 @@
           },
           {
             "value": 1,
+            "unit": "fr"
+          },
+          {
+            "value": 0.5,
             "unit": "fr"
           }
         ],
@@ -42,7 +46,7 @@
             "unit": "px"
           },
           {
-            "value": "100px, 1fr",
+            "value": "10px, 1fr",
             "unit": "minmax"
           },
           {
@@ -52,21 +56,35 @@
         ],
         "areas": [
           "header header header header header",
-          "main main . . sidebar",
-          "main main . img sidebar",
-          "main main . . sidebar",
-          ". footer footer footer ."
+          "baner baner baner baner baner",
+          "main main main image sidebar",
+          "main main main . sidebar",
+          "main main main . sidebar",
+          "footer footer footer footer footer"
         ],
         "blocks": [
           {
-            "blockName": "TITLE",
+            "blockName": "HEADER",
             "contents": {
               "type": "text",
-              "value": "THIS IS CARD HEADER LINE!!!"
+              "value": "THIS IS HEADER"
             },
             "styles": {
               "color": "white",
               "gridArea": "header",
+              "backgroundColor": "silver",
+              "textAlign": "center"
+            }
+          },
+          {
+            "blockName": "API_EPISODE_LIST",
+            "contents": {
+              "type": "text",
+              "endpoint": "/episode"
+            },
+            "styles": {
+              "color": "white",
+              "gridArea": "baner",
               "backgroundColor": "silver",
               "textAlign": "center"
             }
@@ -117,9 +135,9 @@
               "value": "https://api.thecatapi.com/v1/images/search?size=full"
             },
             "styles": {
-              "gridArea": "img",
-              "objectFit": "cover",
-              "maxWidth": "-webkit-fill-available"
+              "gridArea": "image",
+              "width": "-webkit-fill-available",
+              "objectFit": "contain"
             }
           }
         ]

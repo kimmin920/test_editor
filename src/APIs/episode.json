@@ -1,0 +1,129 @@
+{
+  "data": {
+    "episodes": [
+      {
+        "id": 2,
+        "insertedAt": "2021-07-29T05:45:25",
+        "nextId": 3,
+        "post": {
+          "id": 198,
+          "insertedAt": "2021-07-29T05:45:14",
+          "title": "GOMEZ IS HERE!4",
+          "type": "VOD",
+          "vodResource": {
+            "duration": 123,
+            "id": 31,
+            "playlistSrc": "https://multiplatform-f.akamaihd.net/i/multi/will/bunny/big_buck_bunny_,640x360_400,640x360_700,640x360_1000,950x540_1500,.f4v.csmil/master.m3u8",
+            "thumbnailSrc": "https://placekitten.com/720/480"
+          }
+        },
+        "postId": 198,
+        "prevId": null,
+        "seriesId": 1
+      },
+      {
+        "id": 3,
+        "insertedAt": "2021-07-29T05:45:28",
+        "nextId": null,
+        "post": {
+          "id": 199,
+          "insertedAt": "2021-07-29T05:45:15",
+          "title": "GOMEZ IS HERE!4",
+          "type": "VOD",
+          "vodResource": {
+            "duration": 123,
+            "id": 32,
+            "playlistSrc": "https://multiplatform-f.akamaihd.net/i/multi/will/bunny/big_buck_bunny_,640x360_400,640x360_700,640x360_1000,950x540_1500,.f4v.csmil/master.m3u8",
+            "thumbnailSrc": "https://placekitten.com/720/480"
+          }
+        },
+        "postId": 199,
+        "prevId": 2,
+        "seriesId": 1
+      },
+      {
+        "id": 4,
+        "insertedAt": "2021-07-29T05:45:28",
+        "nextId": null,
+        "post": {
+          "id": 199,
+          "insertedAt": "2021-07-29T05:45:15",
+          "title": "GOMEZ IS HERE!4",
+          "type": "VOD",
+          "vodResource": {
+            "duration": 123,
+            "id": 32,
+            "playlistSrc": "https://multiplatform-f.akamaihd.net/i/multi/will/bunny/big_buck_bunny_,640x360_400,640x360_700,640x360_1000,950x540_1500,.f4v.csmil/master.m3u8",
+            "thumbnailSrc": "https://placekitten.com/720/480"
+          }
+        },
+        "postId": 199,
+        "prevId": 2,
+        "seriesId": 1
+      },
+      {
+        "id": 5,
+        "insertedAt": "2021-07-29T05:45:28",
+        "nextId": null,
+        "post": {
+          "id": 199,
+          "insertedAt": "2021-07-29T05:45:15",
+          "title": "GOMEZ IS HERE!4",
+          "type": "VOD",
+          "vodResource": {
+            "duration": 123,
+            "id": 32,
+            "playlistSrc": "https://multiplatform-f.akamaihd.net/i/multi/will/bunny/big_buck_bunny_,640x360_400,640x360_700,640x360_1000,950x540_1500,.f4v.csmil/master.m3u8",
+            "thumbnailSrc": "https://placekitten.com/720/480"
+          }
+        },
+        "postId": 199,
+        "prevId": 2,
+        "seriesId": 1
+      },
+      {
+        "id": 6,
+        "insertedAt": "2021-07-29T05:45:28",
+        "nextId": null,
+        "post": {
+          "id": 199,
+          "insertedAt": "2021-07-29T05:45:15",
+          "title": "GOMEZ IS HERE!4",
+          "type": "VOD",
+          "vodResource": {
+            "duration": 123,
+            "id": 32,
+            "playlistSrc": "https://multiplatform-f.akamaihd.net/i/multi/will/bunny/big_buck_bunny_,640x360_400,640x360_700,640x360_1000,950x540_1500,.f4v.csmil/master.m3u8",
+            "thumbnailSrc": "https://placekitten.com/720/480"
+          }
+        },
+        "postId": 199,
+        "prevId": 2,
+        "seriesId": 1
+      },
+      {
+        "id": 7,
+        "insertedAt": "2021-07-29T05:45:28",
+        "nextId": null,
+        "post": {
+          "id": 199,
+          "insertedAt": "2021-07-29T05:45:15",
+          "title": "GOMEZ IS HERE!4",
+          "type": "VOD",
+          "vodResource": {
+            "duration": 123,
+            "id": 32,
+            "playlistSrc": "https://multiplatform-f.akamaihd.net/i/multi/will/bunny/big_buck_bunny_,640x360_400,640x360_700,640x360_1000,950x540_1500,.f4v.csmil/master.m3u8",
+            "thumbnailSrc": "https://placekitten.com/720/480"
+          }
+        },
+        "postId": 199,
+        "prevId": 2,
+        "seriesId": 1
+      }
+    ]
+  },
+  "etc": {
+    "version": "api_v1"
+  }
+}

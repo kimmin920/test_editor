@@ -3,7 +3,6 @@ import Page from './Page';
 import styled from 'styled-components';
 import { PageContext } from './context/PageContext';
 
-
 function App() {
   const { page } = useContext(PageContext);
 

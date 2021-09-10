@@ -3,6 +3,7 @@ import useImmerReducer from '../hooks/useImmerReducer';
 import pageReducer, { TYPES } from './pageReducer';
 import pageData from '../samples/default.json';
 import grid from '../samples/grid.json';
+import apiList from '../samples/apiList.json';
 
 export const PageContext = createContext();
 
@@ -31,7 +32,7 @@ export default function PageProvider({ children }) {
   } = TYPES.PAGE;
 
   useEffect(() => {
-    dispatch({ type: UPDATE_PAGE, payload: grid.page });
+    dispatch({ type: UPDATE_PAGE, payload: apiList.page });
   }, []);
 
 
